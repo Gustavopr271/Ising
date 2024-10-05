@@ -65,7 +65,7 @@ for temp in T:
     p=1.0 - np.exp(-2*e/ temp)
     l_energy=[]
     l_mag=[]
-    it=12000
+    it=2000
     for i in Test(it):
         l_energy.append(energy(i,N,nbr))
         l_mag.append(mag(i))
