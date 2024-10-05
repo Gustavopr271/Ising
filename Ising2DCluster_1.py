@@ -4,14 +4,16 @@ import matplotlib.pyplot as plt
 import time
 start=time.time()
 
-L = 8
+L = 50
 N = L**2
 nbr = {i : ((i // L) * L + (i + 1) % L, (i + L) % N,
             (i // L) * L + (i - 1) % L, (i - L) % N)
                                     for i in range(N)}
 e=1
 h=0
-T = list_T = [1.4 + 0.05 * i for i in range(40)]
+T_1 = [1.65+0.01*i for i in range(60)]   ###behaviour near below to Tc
+T_2 = [2.29+0.01*i for i in range(60)]   ###behaviour near up to Tc
+T=T_1+T_2
 
 def energy(S, N, nbr):
     E = 0.0
@@ -63,7 +65,7 @@ for temp in T:
     p=1.0 - np.exp(-2*e/ temp)
     l_energy=[]
     l_mag=[]
-    it=500
+    it=12000
     for i in Test(it):
         l_energy.append(energy(i,N,nbr))
         l_mag.append(mag(i))
