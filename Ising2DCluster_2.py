@@ -5,18 +5,18 @@ import pandas as pd
 import time
 start=time.time()
 
-L = 8
+L = 50
 N = L * L
 nbr = {i : ((i // L) * L + (i + 1) % L, (i + L) % N,
             (i // L) * L + (i - 1) % L, (i - L) % N)
                                     for i in range(N)}
 e=1
 h=0
-#T = [0.5 + 0.05 * i for i in range(60)]  ###Global behaviour
-T = [1.65+0.01*i for i in range(60)]   ###behaviour near below to Tc
-#T = [2.29+0.01*i for i in range(60)]   ###behaviour near up to Tc
+T_1 = [1.65+0.01*i for i in range(60)]   ###behaviour near below to Tc
+T_2 = [2.29+0.01*i for i in range(60)]   ###behaviour near up to Tc
+T=T_1+T_2
 
-nsteps = 500
+nsteps = 12000
 S = [1 for k in range(N)]
 
 def energy(S, N, nbr):
