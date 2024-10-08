@@ -82,7 +82,7 @@ print('tiempo',(end-start))
 
 dict={'Temp':T, 'c_v':t_cv, 'MagSusc':t_susc, 'MeanMag':t_meanmag, 'MeanEnergy':t_meanenergy}
 df=pd.DataFrame(dict)
-df.to_csv(r'C:\Users\GUSTAVO\Desktop\PY4E\GraphThesisLic\Final_Scripts\2d_cvsus_20.csv', index=False)
+#df.to_csv(r'C:\Users\GUSTAVO\Desktop\PY4E\GraphThesisLic\Final_Scripts\2d_cvsus_20.csv', index=False)
 
 plt.subplot(2,1,1)
 plt.scatter(T, t_cv, s=5)
@@ -93,5 +93,5 @@ plt.subplot(2,1,2)
 plt.scatter(T, t_susc, s=5)
 plt.xlabel("Temperatura")
 plt.ylabel("Susceptibilidad magnetica")
-plt.savefig(r"C:\Users\GUSTAVO\Desktop\PY4E\GraphThesisLic\Final_Scripts\2d_cvsus_20.jpg")
+#plt.savefig(r"C:\Users\GUSTAVO\Desktop\PY4E\GraphThesisLic\Final_Scripts\2d_cvsus_20.jpg")
 plt.show()
